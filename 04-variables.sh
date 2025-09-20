@@ -4,4 +4,4 @@
 echo "================================================"
 
 echo "All variables passing in this script:$@"
-echo "All variables passing in this script:$@"
+echo "All variables passing in this script:$*"
