@@ -8,6 +8,6 @@ sleep 10
 
 END_DATE=$(date +%s)
 
-TOTAL_TIME=$(($START_DATE-$END_DATE))
+TOTAL_TIME=$(($END_DATE-$START_DATE))
 
-echo "Today date is: $TOTAL_TIME"
+echo "Total time in seconds: $TOTAL_TIME"
