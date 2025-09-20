@@ -8,4 +8,4 @@ echo "All variables passing in this script:$*"
 
 echo "Script name is:$0"
 
-echo "Process ID is:$1"
+echo "Process ID is:$$"
