@@ -5,7 +5,8 @@ echo "================================================"
 
 echo "All variables passing in this script:$@"
 echo "All variables passing in this script:$*"
-
+echo "Calling another script with bash..."
+bash 03-variables.sh
 echo "Script name is:$0"
 echo "Current directory:$PWD"
 echo "Who is running script:$USER"
