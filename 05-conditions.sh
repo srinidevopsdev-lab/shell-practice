@@ -6,5 +6,5 @@ NUMBER=$1
 if [ $NUMBER -lt 10 ]; then
     echo "Given no is less than 10"
     else 
-    echo "Given no is less than 10"
+    echo "Given no is greater than 10"
 fi
