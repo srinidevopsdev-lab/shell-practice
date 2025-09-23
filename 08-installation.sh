@@ -20,10 +20,10 @@ VALIDATE () {
 dnf install mysql -y
 VALIDATE $? "Mysql"
 
-dnf install mysql -y
+dnf install nginx -y
 VALIDATE $? "Nginx"
 
-dnf install mysql -y
+dnf install mongodb-mongosh -y
 VALIDATE $? "Mongodb"
     
 
