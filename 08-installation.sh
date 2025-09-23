@@ -1,7 +1,10 @@
 #!/bin/bash
 
 USERID=$(id -u)
-
+R=\033[0;31m
+G=\033[0;32m
+Y=\033[0;33m
+N=\033[0;30m
 
 if [ $USERID -ne 0 ]; then
     echo "Error::Please run this script as root user"
@@ -10,20 +13,37 @@ fi
 
 VALIDATE () {
     if [ $1 -ne 0 ]; then
-        echo "Error: $2 installation is failure"
+        echo "Error: $2 installation is $R failure $N"
         exit 1 # 1 for failure
     else
-        echo "$2 installation is successful"
+        echo "$2 installation is $G successful $N"
     fi
 }
-    
-dnf install mysql -y
-VALIDATE $? "Mysql"
 
-dnf install nginx -y
-VALIDATE $? "Nginx"
+dnf list installed mysql #this command checks installed package
+if [ $? -ne 0 ]; then
+    dnf install mysql -y
+    VALIDATE $? "Mysql"
+else
+    echo -e "Mysql is already exist...  $Y skipping $N"
+fi
+exit 0 # 1 for success
 
-dnf install python3 -y
-VALIDATE $? "python3"
-    
+dnf list installed nginx #this command checks installed package
+if [ $? -ne 0 ]; then
+    dnf install nginx -y
+    VALIDATE $? "nginx"
+else
+    echo -e "Nginx is already exist....  $Y skipping $N"
+fi
+exit 0 # 1 for success
+
+dnf list installed python3 #this command checks installed package
+if [ $? -ne 0 ]; then
+    dnf install python3 -y
+    VALIDATE $? "python3"
+else
+    echo -e "python3 is already exist...  $Y skipping $N"
+fi
+exit 0 # 1 for success
 
