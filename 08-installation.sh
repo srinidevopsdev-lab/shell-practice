@@ -27,7 +27,7 @@ if [ $? -ne 0 ]; then
 else
     echo -e "Mysql is already exist...  $Y skipping $N"
 fi
-exit 0 # 1 for success
+
 
 dnf list installed nginx #this command checks installed package
 if [ $? -ne 0 ]; then
@@ -36,7 +36,7 @@ if [ $? -ne 0 ]; then
 else
     echo -e "Nginx is already exist....  $Y skipping $N"
 fi
-exit 0 # 1 for success
+
 
 dnf list installed python3 #this command checks installed package
 if [ $? -ne 0 ]; then
@@ -45,5 +45,5 @@ if [ $? -ne 0 ]; then
 else
     echo -e "python3 is already exist...  $Y skipping $N"
 fi
-exit 0 # 1 for success
+
 
