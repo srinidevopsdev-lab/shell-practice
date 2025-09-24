@@ -10,7 +10,7 @@ if [ "$num" -le 1 ]; then
 elif [ "$num" -eq 2 ]; then
     echo "$num is a prime number."
     exit 0
-fi
+fi  
 
 is_prime=true # Flag to track primality
 
