@@ -21,7 +21,7 @@ VALIDATE () {
         echo "Error: $2 installation is $R failure $N" | tee -a $LOG_FILE
         exit 1 # 1 for failure
     else
-        echo "$2 installation is $G successful $N" | tee -a $LOG_FILE
+        echo -e "$2 installation is $G successful $N" | tee -a $LOG_FILE
     fi
 }
 
