@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Iterate from 1 to 5
-for (( i=0; i<5; i++ )); do
-  echo "Count: $i"
+# Iterate with a step
+for (( j=0; j<10; j+=2 )); do
+  echo "Even number: $j"
 done
