@@ -1,5 +1,7 @@
     #!/bin/bash
-    
-    echo "What is your name?"
+
+    echo "Please provide username and password?"
     read name
-    echo "Hello, $name!"
+    read -s password
+    echo "username: $name"
+    echo "password: $password!"
