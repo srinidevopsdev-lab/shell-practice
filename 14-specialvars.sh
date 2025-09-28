@@ -3,5 +3,6 @@
 for TOKEN in $*
 do
    echo $TOKEN
-   echo $#
+   
 done
+    echo $#
