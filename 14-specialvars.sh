@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for TOKEN in $*
+for TOKEN in $@
 do
    echo $TOKEN
    

@@ -4,4 +4,4 @@
     read name
     read -s password
     echo "username: $name"
-    echo "password: $password!"
+    echo "password: $password"
