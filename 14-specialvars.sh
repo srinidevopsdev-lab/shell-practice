@@ -1,8 +1,8 @@
 #!/bin/sh
 
-for TOKEN in $@
-do
-   echo $TOKEN
-   
-done
-    echo $#
+   b=0
+   while [ "$b" -ge 0 ]  # this is loop2
+   do
+      echo -n "$b "
+      b=`expr $b - 1`
+   done
