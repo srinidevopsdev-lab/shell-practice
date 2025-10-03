@@ -18,7 +18,7 @@ fi
 mkdir -p $LOGS_FOLDER
 echo "script started executed at: $(date)" | tee -a $LOG_FILE
 
-source_dir="/var/log/shell-practiceu"
+source_dir="/var/log/shell-practice"
 
 
 
@@ -32,5 +32,7 @@ deleteoldfiles=$( find $source_dir -type f -name "*.log" -mtime +14)
 while  IFS= read -r filepath; do
 
     echo "Processing line: $filepath"
+    rm -rf $filepath
+    echo "deleted the file: $filepath" 
 
 done <<<$deleteoldfiles
