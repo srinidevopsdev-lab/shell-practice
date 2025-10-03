@@ -27,7 +27,7 @@ if [ ! -d $source_dir ]; then
     exit 1
 fi
 
-deleteoldfiles=$( find $source_dir -type f -name "*.log" -size +50c -mtime +14)
+deleteoldfiles=$( find $source_dir -type f -name "*.log" -mtime +14)
  
 while  IFS= read -r filepath; do
 
