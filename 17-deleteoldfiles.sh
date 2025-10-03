@@ -1,5 +1,6 @@
 #!/bin/bash
 
+user_id=$(id -u)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -13,6 +14,11 @@ mkdir -p $LOGS_FOLDER
 echo "script started executed at: $(date)" | tee -a $LOG_FILE
 
 source_dir=/home/ec2-user
+
+if [ $user_id -ne 0 ]; then
+    echo -e "error:: Run this script as root user"
+    exit 1
+fi
 
 if [ ! -d $source_dir ]; then
     echo -e "error:: $source_dir is doesn't exist"
