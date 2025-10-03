@@ -18,7 +18,7 @@ fi
 mkdir -p $LOGS_FOLDER
 echo "script started executed at: $(date)" | tee -a $LOG_FILE
 
-source_dir="/var/log/shell-practice"
+source_dir="/var/log/shell-practiceu"
 
 
 
